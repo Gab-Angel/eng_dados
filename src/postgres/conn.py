@@ -1,4 +1,5 @@
 import psycopg2
+from psycopg2.extras import RealDictCursor
 from decouple import config
 from pathlib import Path
 
@@ -10,7 +11,8 @@ def get_conn():
         host=config("POSTGRES_HOST"),
         port=config("POSTGRES_PORT"),
         user=config("POSTGRES_USER"),
-        password=config("POSTGRES_PASSWORD")
+        password=config("POSTGRES_PASSWORD"),
+        cursor_factory=RealDictCursor
     )
 
 
