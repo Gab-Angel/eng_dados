@@ -207,3 +207,7 @@ CREATE TABLE cursa (
         REFERENCES estudante(mat_estudante)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO semestre VALUES (2026,2,NULL, NULL);
+INSERT INTO departamento VALUES ('DMA', 'Departamento de Matemática', NULL, 20000,1000);
+INSERT INTO disciplina VALUES ('MAT0064', 'Cálculo I', NULL, 6, 'DMA');
